@@ -33,7 +33,8 @@ EXAMPLE: elrunner.py 'username@127.0.0.1' /usr/local/static/linux/x86_64/nmap 19
 ```
 
 This example the server do not have nmap installed, but the tool automatically sends the nmap binary over SSH
-and execute it.
+and execute directly from memory without it land on disk. Execution will be obfuscated in process list, only the perl
+process will be visible without any arguments so a sysadmin will not know what was executed.   
 
 ```sh
 ⬢  elf-memfd_create  ./elf-runner.py vagrant@127.0.0.1:2222 '/usr/local/static/linux/x86_64/nmap 127.0.0.1 -p 80'
@@ -103,3 +104,12 @@ PORT   STATE  SERVICE
 Nmap done: 1 IP address (1 host up) scanned in 0.01 seconds
 Cannot find nmap-payloads. UDP payloads are disabled.
 ```
+
+
+
+
+
+
+
+
+**This content was created by Kindred Group Security. Please share if you enjoyed!**
